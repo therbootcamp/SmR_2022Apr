@@ -1,0 +1,14 @@
+require(tidyverse)
+
+avocado_cali <- read_csv(file = "1_Data/avocado_cali.csv")
+
+cali_lm <- glm(formula = Verkaufsvolumen ~ Preis + Typ, 
+              data = avocado_cali, family='poisson')
+
+
+require(patchwork)
+ggplot(avocado_cali, mapping = aes(Preis, Verkaufsvolumen)) + 
+  geom_point() + geom_smooth(method='lm') + 
+
+ggplot(mapping = aes(fitted(cali_lm), resid(cali_lm))) + 
+  geom_point() 
