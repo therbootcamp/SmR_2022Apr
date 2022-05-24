@@ -130,56 +130,9 @@ psi1 <- psi1 %>% mutate_if(is.character, factor)
 ```
 
 
-### B - p(si)-Hacking Wettbewerb
+### B - p(si)-Hacking
 
-1. Der erste Abschnitt besteht aus zwei <i>p</i>-Hacking Wettbewerben! Der Wettbewerb endet in
-
-<font style="font-size:32px"><p id="demo" align="center"></p></font>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Apr 23, 2022 17:30:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-2. Das Ziel beider Wettbewerbe ist es den kleinstmöglichen <i>p</i>-Wert durch das fortwährende Massieren Bem's experimenteller Daten zu extrahieren. Finde dafür bis zu drei Analysen, die zeigen, dass a) Menschen *psi*-Fähigkeiten besitzen, d.h., dass die `Trefferrate` signifikant höher als Chance ist und b) dass es andere Variablen gibt die *psi*-Fähigkeiten signifikant vorhersagen, was ebenso ein Beleg für die Existenz solcher Fähigkeiten wäre. Es gibt keine Regeln, ausser dass `Trefferrate` als Kriterium zu wählen ist. Du kannst jeden möglichen Test verwenden. Dir ist es auch erlaubt nur Komponenten der Daten mit `data %>% filter(condition)` auszuwählen.
-
-3. Für jede der beiden Wettbewerbe - jeweils ein Wettbewerb pro Experiment - darfst du drei Ergebnisse einreichen. Mehr Informationen über den Datensatz findet ihr unter dem  *Datasets* tab. Die Person mit dem niedrigsten <i>p</i>-Wert gewinnt &#x1F36B;&#x1F36B;&#x1F36B;.  
-
-4. Reiche als Ergebnisse ein Pseudonym, den p-Wert und den Code-Schnipsel des Tests (inkl. Datenvorverarbeitung, falls relevant) ein über die folgenden Fragebögen:
-
-<table align="center">
-  <tr>
-    <td>Wettbewerb 1</td>
-    <td><a href="https://docs.google.com/forms/d/e/1FAIpQLScVefMfFoLj9GzL8hdXbCp91WcSiI6cVrg_K1b2tMhdPvIERA/viewform?usp=sf_link"><font style="font-size:18px;font-weight:900">Einreichen</font></a></td>
-  </tr>
-</table>
-
+1. Versuche den kleinstmöglichen <i>p</i>-Wert durch das fortwährende Massieren Bem's experimenteller Daten zu extrahieren. Finde dafür bis zu drei Analysen, die zeigen, dass a) Menschen *psi*-Fähigkeiten besitzen, d.h., dass die `Trefferrate` signifikant höher als Chance ist und b) dass es andere Variablen gibt die *psi*-Fähigkeiten signifikant vorhersagen, was ebenso ein Beleg für die Existenz solcher Fähigkeiten wäre. Es gibt keine Regeln, ausser dass `Trefferrate` als Kriterium zu wählen ist. Du kannst jeden möglichen Test verwenden. Dir ist es auch erlaubt nur Komponenten der Daten mit `data %>% filter(condition)` auszuwählen.
 
 ### C - Poweranalyse
 
