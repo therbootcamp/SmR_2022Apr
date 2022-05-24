@@ -572,8 +572,8 @@ Trefferrate_bm &lt;- stan_glm(formula = Trefferrate ~ Geschlecht + Stimulus_seek
 <pre><code>
 SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 1).
 Chain 1: 
-Chain 1: Gradient evaluation took 0.000703 seconds
-Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 7.03 seconds.
+Chain 1: Gradient evaluation took 0.000592 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 5.92 seconds.
 Chain 1: Adjust your expectations accordingly!
 Chain 1: 
 Chain 1: 
@@ -590,15 +590,15 @@ Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 1: 
-Chain 1:  Elapsed Time: 0.046686 seconds (Warm-up)
-Chain 1:                0.048133 seconds (Sampling)
-Chain 1:                0.094819 seconds (Total)
+Chain 1:  Elapsed Time: 0.048909 seconds (Warm-up)
+Chain 1:                0.05169 seconds (Sampling)
+Chain 1:                0.100599 seconds (Total)
 Chain 1: 
 
 SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 2).
 Chain 2: 
-Chain 2: Gradient evaluation took 1.7e-05 seconds
-Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
+Chain 2: Gradient evaluation took 2.6e-05 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.26 seconds.
 Chain 2: Adjust your expectations accordingly!
 Chain 2: 
 Chain 2: 
@@ -615,15 +615,15 @@ Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 2: 
-Chain 2:  Elapsed Time: 0.040156 seconds (Warm-up)
-Chain 2:                0.049885 seconds (Sampling)
-Chain 2:                0.090041 seconds (Total)
+Chain 2:  Elapsed Time: 0.062597 seconds (Warm-up)
+Chain 2:                0.053107 seconds (Sampling)
+Chain 2:                0.115704 seconds (Total)
 Chain 2: 
 
 SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 3).
 Chain 3: 
-Chain 3: Gradient evaluation took 2.5e-05 seconds
-Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.25 seconds.
+Chain 3: Gradient evaluation took 2.2e-05 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.22 seconds.
 Chain 3: Adjust your expectations accordingly!
 Chain 3: 
 Chain 3: 
@@ -640,15 +640,15 @@ Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 3: 
-Chain 3:  Elapsed Time: 0.049395 seconds (Warm-up)
-Chain 3:                0.054118 seconds (Sampling)
-Chain 3:                0.103513 seconds (Total)
+Chain 3:  Elapsed Time: 0.045849 seconds (Warm-up)
+Chain 3:                0.041927 seconds (Sampling)
+Chain 3:                0.087776 seconds (Total)
 Chain 3: 
 
 SAMPLING FOR MODEL &#39;continuous&#39; NOW (CHAIN 4).
 Chain 4: 
-Chain 4: Gradient evaluation took 1.8e-05 seconds
-Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.18 seconds.
+Chain 4: Gradient evaluation took 1.5e-05 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
 Chain 4: Adjust your expectations accordingly!
 Chain 4: 
 Chain 4: 
@@ -665,9 +665,9 @@ Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
 Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 Chain 4: 
-Chain 4:  Elapsed Time: 0.048803 seconds (Warm-up)
-Chain 4:                0.042981 seconds (Sampling)
-Chain 4:                0.091784 seconds (Total)
+Chain 4:  Elapsed Time: 0.049009 seconds (Warm-up)
+Chain 4:                0.05131 seconds (Sampling)
+Chain 4:                0.100319 seconds (Total)
 Chain 4: </code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Printe das Objekt und betrachte den Output. Er sieht sehr anders
@@ -694,10 +694,10 @@ Funktion für <code>Trefferrate_bm</code>.</p></li>
 <pre class="r"><code># Bayesian posterior credible interval
 posterior_interval(Trefferrate_bm, prob = .95)</code></pre>
 <pre><code>                   2.5% 97.5%
-(Intercept)      33.087 52.85
-GeschlechtMale   -2.371  7.73
-Stimulus_seeking -0.196  6.81
-sigma            10.822 14.29</code></pre>
+(Intercept)      33.134 53.07
+GeschlechtMale   -2.329  7.67
+Stimulus_seeking -0.172  6.78
+sigma            10.895 14.36</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Wenn Null nicht enthalten ist, dann ist die Wahrscheinlichkeit, dass
 ein Effekt Null ist tatsächlich kleiner als 5%.</li>
